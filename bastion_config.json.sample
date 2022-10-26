@@ -1,0 +1,21 @@
+{
+  "key_dir": "/my-bastion-keys",
+  "ssh_options": [
+    "ServerAliveInterval=30"
+  ],
+  "bastions": {
+    "bastion": {
+      "host": "127.0.0.1",
+      "user": "my-user",
+      "key_file": "my-key-file.pem"
+    }
+  },
+  "remotes": {
+    "remote_server": {
+      "bastion": "bastion",
+      "remote_host": "example.com",
+      "remote_port": 5432,
+      "local_port": 15432
+    }
+  }
+}
